@@ -108,7 +108,7 @@ class CakeEngineTest extends TestCase
     {
         $this->Logger->expects($this->once())
             ->method('error')
-            ->with($this->matchesRegularExpression('/Connection to database could not be established:/'));
+            ->with($this->matchesRegularExpression('/Connection to Mysql could not be established:/'));
         Queue::setConfig('invalid', [
             'className' => 'Josegonzalez\CakeQueuesadilla\Engine\CakeEngine',
             'datasource' => 'wrong-datasource-params',
